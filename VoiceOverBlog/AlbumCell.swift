@@ -52,5 +52,22 @@ extension AlbumCell {
         case .rating(let value):
             ratingLabel.accessibilityValue = "\(value) purple umbrellas"
         }
+        
+        ratingLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        ratingLabel.adjustsFontForContentSizeCategory = true
+        
+        albumLabel.isAccessibilityElement = true
+        albumLabel.accessibilityTraits = UIAccessibilityTraitStaticText
+        albumLabel.accessibilityLabel = "Album name"
+        albumLabel.accessibilityValue = album.name
+        albumLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        albumLabel.adjustsFontForContentSizeCategory = true
+        
+        yearLabel.isAccessibilityElement = true
+        yearLabel.accessibilityTraits = UIAccessibilityTraitNone
+        yearLabel.accessibilityLabel = "Year Produced"
+        yearLabel.accessibilityValue = album.year
+        yearLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        yearLabel.adjustsFontForContentSizeCategory = true
     }
 }

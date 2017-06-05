@@ -41,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453191791EE6211B00D3251E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4554967B1ED5299F00D633E8 /* TableViewController.swift */,
+				457EFFBF1ED60F2A00BE5FB1 /* DetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4531917A1EE6212300D3251E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				453191771EE6121200D3251E /* Album.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4531917B1EE6212C00D3251E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4554966D1ED5296900D633E8 /* Main.storyboard */,
+				453191751EE6110400D3251E /* AlbumCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4554965D1ED5296900D633E8 = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				455496691ED5296900D633E8 /* AppDelegate.swift */,
-				4554967B1ED5299F00D633E8 /* TableViewController.swift */,
-				453191751EE6110400D3251E /* AlbumCell.swift */,
-				453191771EE6121200D3251E /* Album.swift */,
-				4554966D1ED5296900D633E8 /* Main.storyboard */,
-				457EFFBF1ED60F2A00BE5FB1 /* DetailViewController.swift */,
+				4531917A1EE6212300D3251E /* Model */,
+				4531917B1EE6212C00D3251E /* View */,
+				453191791EE6211B00D3251E /* Controllers */,
 				455496701ED5296900D633E8 /* Assets.xcassets */,
 				455496721ED5296900D633E8 /* LaunchScreen.storyboard */,
 				455496751ED5296900D633E8 /* Info.plist */,
