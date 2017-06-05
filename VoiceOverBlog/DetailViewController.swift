@@ -13,14 +13,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songYearLabel: UILabel!
     
-    var song: (String, String) = ("", "")
+    var album: Album!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        songTitleLabel.text = song.0
-        songYearLabel.text = song.1
-
-        
+        songTitleLabel.text = album.name
+        songYearLabel.text = album.year
     }
 
     
