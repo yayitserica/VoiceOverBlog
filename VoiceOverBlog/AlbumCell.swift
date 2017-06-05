@@ -28,17 +28,29 @@ class AlbumCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     //This function is called in the TableViewController cellForRowAt() method.
     func configureCell(with album: Album) {
         ratingValue = album.rating
         ratingLabel.text = ratingString
         albumLabel.text = album.name
         yearLabel.text = album.year
+        configureAccessibility(album)
     }
     
-
+}
+    // MARK: - Accessibility
+extension AlbumCell {
+    
+    func configureAccessibility(_ album: Album) {
+        ratingLabel.isAccessibilityElement = true
+        ratingLabel.accessibilityTraits = UIAccessibilityTraitNone
+        ratingLabel.accessibilityLabel = "Rating"
+        
+        switch album.rating {
+        case .unknown:
+            ratingLabel.accessibilityValue = "Unknown"
+        case .rating(let value):
+            ratingLabel.accessibilityValue = "\(value) purple umbrellas"
+        }
+    }
 }

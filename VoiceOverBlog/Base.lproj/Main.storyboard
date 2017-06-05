@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Favorite Prince Albums-->
         <scene sceneID="GCH-vh-wym">
             <objects>
-                <tableViewController id="g1J-vM-QY2" customClass="TableViewController" customModule="VoiceOverBlog" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Favorite Prince Albums" id="g1J-vM-QY2" customClass="TableViewController" customModule="VoiceOverBlog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="x3g-aA-wD5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                             <outlet property="delegate" destination="g1J-vM-QY2" id="wxR-a7-Aax"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ccy-xO-NGN"/>
+                    <navigationItem key="navigationItem" title="Favorite Prince Albums" id="ccy-xO-NGN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2R-Kg-WQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
