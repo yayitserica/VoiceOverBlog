@@ -43,31 +43,38 @@ extension AlbumCell {
     
     func configureAccessibility(_ album: Album) {
         ratingLabel.isAccessibilityElement = true
-        ratingLabel.accessibilityTraits = UIAccessibilityTraitNone
-        ratingLabel.accessibilityLabel = "Rating"
+        albumLabel.isAccessibilityElement = true
+        yearLabel.isAccessibilityElement = true
         
+        ratingLabel.accessibilityTraits = UIAccessibilityTraitNone
+        albumLabel.accessibilityTraits = UIAccessibilityTraitStaticText
+        yearLabel.accessibilityTraits = UIAccessibilityTraitStaticText
+        
+        //Rating Label
+        //Label Value - Accessibility Value - Hint Value: this is the order it will be read aloud
+        ratingLabel.accessibilityLabel = "Rating"
         switch album.rating {
         case .unknown:
             ratingLabel.accessibilityValue = "Unknown"
         case .rating(let value):
             ratingLabel.accessibilityValue = "\(value) purple umbrellas"
         }
+        ratingLabel.accessibilityHint = "Describes Erica's Rating"
+        
+        //Album Label
+        albumLabel.accessibilityLabel = "Album name"
+        albumLabel.accessibilityValue = album.name
+        albumLabel.accessibilityHint = "Describes name of album"
+        
+        //Year label
+        yearLabel.accessibilityLabel = "Year"
+        yearLabel.accessibilityValue = album.year
+        yearLabel.accessibilityHint = "Describes year album was produced"
         
         ratingLabel.font = UIFont.preferredFont(forTextStyle: .body)
         ratingLabel.adjustsFontForContentSizeCategory = true
-        
-        albumLabel.isAccessibilityElement = true
-        albumLabel.accessibilityTraits = UIAccessibilityTraitStaticText
-        albumLabel.accessibilityLabel = "Album name"
-        albumLabel.accessibilityHint = "Describes name of album"
-        albumLabel.accessibilityValue = album.name
         albumLabel.font = UIFont.preferredFont(forTextStyle: .body)
         albumLabel.adjustsFontForContentSizeCategory = true
-        
-        yearLabel.isAccessibilityElement = true
-        yearLabel.accessibilityTraits = UIAccessibilityTraitNone
-        yearLabel.accessibilityLabel = "Year Produced"
-        yearLabel.accessibilityValue = album.year
         yearLabel.font = UIFont.preferredFont(forTextStyle: .body)
         yearLabel.adjustsFontForContentSizeCategory = true
     }
