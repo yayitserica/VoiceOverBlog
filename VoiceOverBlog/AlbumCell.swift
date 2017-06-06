@@ -59,6 +59,7 @@ extension AlbumCell {
         albumLabel.isAccessibilityElement = true
         albumLabel.accessibilityTraits = UIAccessibilityTraitStaticText
         albumLabel.accessibilityLabel = "Album name"
+        albumLabel.accessibilityHint = "Describes name of album"
         albumLabel.accessibilityValue = album.name
         albumLabel.font = UIFont.preferredFont(forTextStyle: .body)
         albumLabel.adjustsFontForContentSizeCategory = true
